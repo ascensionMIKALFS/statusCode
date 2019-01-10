@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Updated Ascension Status Codes 2.0
 // @namespace    Ascension
-// @version      2.0.1
+// @version      2.0.2
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
 // @grant        Ascension
+// @updateURL    https://github.com/ascensionMIKALFS/statusCode/blob/master/Ascension%20Status%20Code%20Picker_2.0.js
+// @downloadURL  https://github.com/ascensionMIKALFS/statusCode/blob/master/Ascension%20Status%20Code%20Picker_2.0.js
 // @require https://code.jquery.com/jquery-3.1.1.min.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js
 // ==/UserScript==
