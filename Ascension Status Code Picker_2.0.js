@@ -11,7 +11,6 @@
 // @require https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js
 // ==/UserScript==
 
-// downloadURL is for updates only, does not affect script if link is broken. Also, username & pass for github account is ascensionMIKALFS / B0rg3$$!
 
 (function () {
     /**
