@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Updated Ascension Status Codes 2.0
 // @namespace    Ascension
-// @version      2.1
+// @version      2.2
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -4636,7 +4636,7 @@ function setToday() {
     var xds = addZero(now.getHours()) + '' + addZero(now.getMinutes());
     var val = $('#selector').val();
     if (val == "WUE") {
-        var enter = formatDate(now) + ' ' + $('#selector').val() + ' ' + xds + ' ET ' + firstCI + ' (' + secondCI + ') ';
+        var enter = formatDate(now) + ' ' + $('#selector').val() + ' ' + xds + ' ET ' + secondCI;
 
     } else {
         var enter = formatDate(now) + ' ' + $('#selector').val() + ' ' + xds + ' ET ';
