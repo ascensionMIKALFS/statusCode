@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Updated Ascension Status Codes 2.0
 // @namespace    Ascension
-// @version      2.2
+// @version      2.3
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
 // @grant        Ascension
-// @downloadURL  https://raw.githubusercontent.com/ascensionMIKALFS/statusCode/master/Ascension%20Status%20Code%20Picker_2.0.js
+// @downloadURL  https://github.com/ascensionMIKALFS/statusCode/blob/master/Ascension%20Status%20Code%20Picker_2.0.js
 // @require https://code.jquery.com/jquery-3.1.1.min.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js
 // ==/UserScript==
@@ -4492,7 +4492,19 @@
         roundTime: true, // whether to round minutes and seconds if step > 1
         smartDays: true, // whether days in combo depend on selected month: 31, 30, 28
     };
+    //Below is the script that enters the data into the ticket.
+
+
     setTimeout(function () {
+        function totNoBlanks() {
+        var totValue = document.getElementById('sc_task.u_time_on_task').getAttribute('value');
+
+            if (totValue == ""){
+                document.getElementById('sc_task.u_time_on_task').value = "15";
+            } else {
+                document.getElementById('sc_task.u_time_on_task').value = totValue;
+            }
+    }
         //Different Codes:
         //Adds in customer comments on incidents
 
@@ -4524,6 +4536,7 @@
             } else if (titlePage[0] == "T") {
                 var getfullname = document.getElementById('sys_display.sc_task.assigned_to').getAttribute('value');
                 var incidentnumber = document.getElementById('sys_readonly.sc_task.number').getAttribute('value');
+                totNoBlanks();
             }
             var name = getfullname.split(' ').slice(0, 2).reverse().join(' ').replace(',', '');
 
@@ -4608,6 +4621,7 @@ function test12() {
     if ( val == 'AWCU' ) {
         if (document.getElementById('sc_task.state')) {
             document.getElementById('sc_task.state').value = 3;
+
         } else {
             document.getElementById('incident.incident_state').value = 4;
         }
@@ -4630,6 +4644,7 @@ var firstCIWhole = document.getElementById('sys_display.incident.cmdb_ci').getAt
 var firstCI = firstCIWhole.slice(0, 8);
 var secondCIWhole = document.getElementById('sys_display.incident.u_secondary_ci').getAttribute('value');
 var secondCI = secondCIWhole.slice(0, 8);
+var totValue = document.getElementById('sc_task.u_time_on_task').getAttribute('value');
 
 function setToday() {
     var now = new Date();
