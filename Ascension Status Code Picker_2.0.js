@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Updated Ascension Status Codes 2.0
 // @namespace    Ascension
-// @version      2.3
+// @version      2.4
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -4664,7 +4664,7 @@ function setToday() {
     var enterDS = formatDate(now) + ' ' + $('#selector').val() + ' ' + xds + ' ET ';
 
     if (document.getElementById('sc_task.u_desktop_status')) {
-        document.getElementById('sc_task.u_desktop_status').value = enterDS;
+        document.getElementById('sc_task.u_desktop_status').value = enter;
     } else {
         document.getElementById('incident.u_desktop_status').value = enterDS;
     }
