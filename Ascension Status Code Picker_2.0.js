@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Updated Ascension Status Codes 2.6.1
 // @namespace    Ascension
-// @version      2.6.1
+// @version      2.6.2021.1
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -4591,7 +4591,7 @@
         });
         //Loads in the datepicker
         $('#dateinput').combodate({
-            minYear: 2020,
+            minYear: 2021,
             maxYear: 2022,
         });
         //Loads in the timepicker
