@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Updated Ascension Status Codes 2.6.2021.1
 // @namespace    Ascension
-// @version      2.6.2021.1
+// @version      2.6.2021.2
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
