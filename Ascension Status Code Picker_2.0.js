@@ -4497,14 +4497,16 @@
 
     setTimeout(function () {
         function totNoBlanks() {
-        var totValue = parseInt(document.getElementById('sc_task.u_time_on_task').getAttribute('value'));
+        var totValue = document.getElementById('sc_task.u_time_on_task').getAttribute('value');
+        var totValue2 = parseInt(document.getElementById('sc_task.u_time_on_task').getAttribute('value'));
         var totValueFinal = 0;
         var addTime = 15;
+            var timeBase = "15";
 
             if (totValue == ""){
                 document.getElementById('sc_task.u_time_on_task').value = 15;
             } else {
-                totValueFinal = totValue + addTime;
+                totValueFinal = totValue2 + addTime;
                 document.getElementById('sc_task.u_time_on_task').value = totValueFinal;
             }
     }
