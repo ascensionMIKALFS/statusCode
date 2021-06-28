@@ -4502,6 +4502,7 @@
             if (totValue == ""){
                 document.getElementById('sc_task.u_time_on_task').value = "15";
             } else {
+                totValue + 15;
                 document.getElementById('sc_task.u_time_on_task').value = totValue;
             }
     }
