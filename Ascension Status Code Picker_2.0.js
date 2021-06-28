@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Updated Ascension Status Codes 2.6.2021.1
 // @namespace    Ascension
-// @version      2.6.2021.1
+// @version      2.7
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -4497,12 +4497,15 @@
 
     setTimeout(function () {
         function totNoBlanks() {
-        var totValue = document.getElementById('sc_task.u_time_on_task').getAttribute('value');
+        var totValue = parseInt(document.getElementById('sc_task.u_time_on_task').getAttribute('value'));
+        var totValueFinal = 0;
+        var addTime = 15;
 
             if (totValue == ""){
-                document.getElementById('sc_task.u_time_on_task').value = "15";
+                document.getElementById('sc_task.u_time_on_task').value = 15;
             } else {
-                document.getElementById('sc_task.u_time_on_task').value = totValue;
+                totValueFinal = totValue + addTime;
+                document.getElementById('sc_task.u_time_on_task').value = totValueFinal;
             }
     }
         //Different Codes:
@@ -4644,7 +4647,7 @@ var firstCIWhole = document.getElementById('sys_display.incident.cmdb_ci').getAt
 var firstCI = firstCIWhole.slice(0, 8);
 var secondCIWhole = document.getElementById('sys_display.incident.u_secondary_ci').getAttribute('value');
 var secondCI = secondCIWhole.slice(0, 8);
-var totValue = document.getElementById('sc_task.u_time_on_task').getAttribute('value');
+/*var totValue = document.getElementById('sc_task.u_time_on_task').getAttribute('value'); */
 
 function setToday() {
     var now = new Date();
