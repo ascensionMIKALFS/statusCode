@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Updated Ascension Status Codes 2.6.2021.1
+// @name         Updated Ascension Status Codes 2.7
 // @namespace    Ascension
 // @version      2.7
 // @description  Inputs status codes on Ascension service now
