@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Updated Ascension Status Codes 2.6.2021.1
 // @namespace    Ascension
-// @version      2.6.2021.2
+// @version      2.6.2021.1
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -4502,7 +4502,6 @@
             if (totValue == ""){
                 document.getElementById('sc_task.u_time_on_task').value = "15";
             } else {
-                totValue + 15;
                 document.getElementById('sc_task.u_time_on_task').value = totValue;
             }
     }
