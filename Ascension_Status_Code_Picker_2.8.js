@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Ascension Status Code Picker 3.0
+// @name         Ascension Status Code Picker 3.1
 // @namespace    Ascension
-// @version      3.0
+// @version      3.1
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -4512,7 +4512,6 @@
 
      //Below is the script that enters the data into the ticket.
     setTimeout(function () {
-        totNoBlanks();
         //Different Codes:
         //Adds in customer comments on incidents
 
@@ -4544,6 +4543,7 @@
             } else if (titlePage[0] == "T") {
                 var getfullname = document.getElementById('sys_display.sc_task.assigned_to').getAttribute('value');
                 var incidentnumber = document.getElementById('sys_readonly.sc_task.number').getAttribute('value');
+                totNoBlanks();
             }
             var name = getfullname.split(' ').slice(0, 2).reverse().join(' ').replace(',', '');
 
