@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Ascension Status Code Picker 3.1
+// @name         Ascension Status Code Picker 3.2
 // @namespace    Ascension
-// @version      3.1
+// @version      3.2
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -4512,6 +4512,14 @@
 
      //Below is the script that enters the data into the ticket.
     setTimeout(function () {
+        var titlePage = document.title;
+            if (titlePage[0] == "T") {
+                totNoBlanks();
+
+            } else if (titlePage[0] == "I") {
+
+            }
+
         //Different Codes:
         //Adds in customer comments on incidents
 
