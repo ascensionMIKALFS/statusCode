@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Updated Ascension Status Codes 2.7.1
+// @name         Updated Ascension Status Codes 2.8
 // @namespace    Ascension
-// @version      2.7.1
+// @version      2.8
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
