@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Updated Ascension Status Codes 2.8
+// @name         Ascension Status Code Picker 2.8
 // @namespace    Ascension
 // @version      2.8
 // @description  Inputs status codes on Ascension service now
