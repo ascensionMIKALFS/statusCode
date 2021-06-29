@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         Ascension Status Code Picker 2.8
+// @name         Ascension Status Code Picker 3.0
 // @namespace    Ascension
-// @version      2.8
+// @version      3.0
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
 // @grant        Ascension
-// @downloadURL  https://raw.githubusercontent.com/ascensionMIKALFS/statusCode/master/Ascension_Status_Code_Picker_2.8.js
+// @downloadURL  https://raw.githubusercontent.com/ascensionMIKALFS/statusCode/master/Ascension%20Status%20Code%20Picker_2.0.js
 // @require https://code.jquery.com/jquery-3.1.1.min.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js
 // ==/UserScript==
@@ -4492,10 +4492,9 @@
         roundTime: true, // whether to round minutes and seconds if step > 1
         smartDays: true, // whether days in combo depend on selected month: 31, 30, 28
     };
-    //Below is the script that enters the data into the ticket.
+    //totNoBlanks enters 15 minutes into the time on task field if the field is blank. If there is a number already recorded in the field, it will increase that time by 15 minutes.
+    // This is to gaurantee that time by the user is recorded. it can be overridden by the user entering their time manually.
 
-
-    setTimeout(function () {
         function totNoBlanks() {
         var totValue = document.getElementById('sc_task.u_time_on_task').getAttribute('value');
         var totValue2 = parseInt(document.getElementById('sc_task.u_time_on_task').getAttribute('value'));
@@ -4510,6 +4509,10 @@
                 document.getElementById('sc_task.u_time_on_task').value = totValueFinal;
             }
     }
+
+     //Below is the script that enters the data into the ticket.
+    setTimeout(function () {
+        totNoBlanks();
         //Different Codes:
         //Adds in customer comments on incidents
 
@@ -4541,7 +4544,6 @@
             } else if (titlePage[0] == "T") {
                 var getfullname = document.getElementById('sys_display.sc_task.assigned_to').getAttribute('value');
                 var incidentnumber = document.getElementById('sys_readonly.sc_task.number').getAttribute('value');
-                totNoBlanks();
             }
             var name = getfullname.split(' ').slice(0, 2).reverse().join(' ').replace(',', '');
 
@@ -4583,6 +4585,7 @@
             ) {
                 if (document.getElementById('sc_task.state')) {
                     document.getElementById('sc_task.state').value = 3;
+                    //totNoBlanks();
                 } else {
                     document.getElementById('incident.incident_state').value = 4;
                 }
