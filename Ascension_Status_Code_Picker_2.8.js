@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         Ascension Status Code Picker 3.2
+// @name         Ascension Status Code Picker 3.3
 // @namespace    Ascension
-// @version      3.2
+// @version      3.3
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
 // @grant        Ascension
-// @downloadURL  https://raw.githubusercontent.com/ascensionMIKALFS/statusCode/master/Ascension_Status_Code_Picker_2.8.js
+// @downloadURL  https://raw.githubusercontent.com/ascensionMIKALFS/statusCode/master/Ascension%20Status%20Code%20Picker.js
 // @require https://code.jquery.com/jquery-3.1.1.min.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js
 // ==/UserScript==
