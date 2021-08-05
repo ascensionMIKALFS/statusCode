@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Ascension Status Code Picker 3.3
+// @name         Ascension Status Code Picker 3.4
 // @namespace    Ascension
-// @version      3.3
+// @version      3.4
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
