@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Ascension Status Code Picker 3.4
+// @name         Ascension Status Code Picker 3.5
 // @namespace    Ascension
-// @version      3.4
+// @version      3.5
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -662,9 +662,11 @@
             });
         });
         //Loads in the datepicker
+        // returns the year (four digits)
+        var MinYearV = new Date().getFullYear()
         $('#dateinput').combodate({
-            minYear: 2021,
-            maxYear: 2022,
+            minYear: MinYearV,
+            maxYear: MinYearV + 1,
         });
         //Loads in the timepicker
         $('#timeinput').combodate({
