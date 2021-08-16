@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Ascension Status Code Picker 3.5
+// @name         Ascension Status Code Picker
 // @namespace    Ascension
-// @version      3.5
+// @version      3.6
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -555,7 +555,7 @@
         var totValue = document.getElementById('sc_task.u_time_on_task').getAttribute('value');
         var totValue2 = parseInt(document.getElementById('sc_task.u_time_on_task').getAttribute('value'));
         var totValueFinal = 0;
-        var addTime = 15;
+        var addTime = 5;
             var timeBase = "15";
 
             if (totValue == ""){
