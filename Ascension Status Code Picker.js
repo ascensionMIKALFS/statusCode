@@ -591,15 +591,7 @@
             } else if (titlePage[0] == "I") {
                 totNoBlanksI();
             }
-     //Below is the script that enters the data into the ticket.
-    setTimeout(function () {
-        var titlePage = document.title;
-            if (titlePage[0] == "T") {
-                totNoBlanks();
 
-            } else if (titlePage[0] == "I") {
-
-            }
 
         //Different Codes:
         //Adds in customer comments on incidents
