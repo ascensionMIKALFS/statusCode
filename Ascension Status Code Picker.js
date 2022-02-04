@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ascension Status Code Picker
 // @namespace    Ascension
-// @version      3.7
+// @version      4.0
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -572,9 +572,9 @@
         var addTime = 5;
             var timeBase = "15";
 
-            if (totValue == ""){
+            if (totValue == "0"){
                 document.getElementById('incident.u_time_on_task').value = 15;
-                document.getElementByID('incident.u_desk_side_support').value = 15;
+                document.getElementById('incident.u_desk_side_support').value = 15;
             } else {
                 totValueFinal = totValue2 + addTime;
                 document.getElementById('incident.u_time_on_task').value = totValueFinal;
