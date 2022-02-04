@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ascension Status Code Picker
 // @namespace    Ascension
-// @version      3.6
+// @version      3.7
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -565,7 +565,32 @@
                 document.getElementById('sc_task.u_time_on_task').value = totValueFinal;
             }
     }
+    function totNoBlanksI() {
+        var totValue = document.getElementById('incident.u_time_on_task').getAttribute('value');
+        var totValue2 = parseInt(document.getElementById('incident.u_time_on_task').getAttribute('value'));
+        var totValueFinal = 0;
+        var addTime = 5;
+            var timeBase = "15";
 
+            if (totValue == ""){
+                document.getElementById('incident.u_time_on_task').value = 15;
+                document.getElementByID('incident.u_desk_side_support').value = 15;
+            } else {
+                totValueFinal = totValue2 + addTime;
+                document.getElementById('incident.u_time_on_task').value = totValueFinal;
+                document.getElementById('incident.u_desk_side_support').value = totValueFinal;
+            }
+    }
+
+     //Below is the script that enters the data into the ticket.
+    setTimeout(function () {
+        var titlePage = document.title;
+            if (titlePage[0] == "T") {
+                totNoBlanks();
+
+            } else if (titlePage[0] == "I") {
+                totNoBlanksI();
+            }
      //Below is the script that enters the data into the ticket.
     setTimeout(function () {
         var titlePage = document.title;
