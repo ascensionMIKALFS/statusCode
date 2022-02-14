@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ascension Status Code Picker
 // @namespace    Ascension
-// @version      4.0
+// @version      4.1 
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -550,7 +550,8 @@
     };
     //totNoBlanks enters 15 minutes into the time on task field if the field is blank. If there is a number already recorded in the field, it will increase that time by 15 minutes.
     // This is to gaurantee that time by the user is recorded. it can be overridden by the user entering their time manually.
-
+	
+	//This function increments the time field for Field Services in TASKS.
         function totNoBlanks() {
         var totValue = document.getElementById('sc_task.u_time_on_task').getAttribute('value');
         var totValue2 = parseInt(document.getElementById('sc_task.u_time_on_task').getAttribute('value'));
@@ -565,16 +566,18 @@
                 document.getElementById('sc_task.u_time_on_task').value = totValueFinal;
             }
     }
-    function totNoBlanksI() {
+    	//This function increments the time field for Field Services in INCIDENTS.
+	//Altered time increments for Dre as he posts many an update to a single ticket. :P
+    	function totNoBlanksI() {
         var totValue = document.getElementById('incident.u_time_on_task').getAttribute('value');
         var totValue2 = parseInt(document.getElementById('incident.u_time_on_task').getAttribute('value'));
         var totValueFinal = 0;
         var addTime = 5;
-            var timeBase = "15";
+            var timeBase = "5";
 
             if (totValue == "0"){
-                document.getElementById('incident.u_time_on_task').value = 15;
-                document.getElementById('incident.u_desk_side_support').value = 15;
+                document.getElementById('incident.u_time_on_task').value = 5;
+                document.getElementById('incident.u_desk_side_support').value = 0;
             } else {
                 totValueFinal = totValue2 + addTime;
                 document.getElementById('incident.u_time_on_task').value = totValueFinal;
