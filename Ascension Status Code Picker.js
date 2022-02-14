@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ascension Status Code Picker
 // @namespace    Ascension
-// @version      4.1 
+// @version      4.2 
 // @description  Inputs status codes on Ascension service now
 // @author       Pamela OConnor
 // @match        https://ascensionprod.service-now.com/*
@@ -630,8 +630,9 @@
                 totNoBlanks();
             }
             var name = getfullname.split(' ').slice(0, 2).reverse().join(' ').replace(',', '');
-
-            var CustomerComment = "Hello: My name is " + name + " and I was the technician that assisted you with " + incidentnumber + ". Thank you for the opportunity to provide you with service today. If for any reason your issue does not appear to be resolved, please contact the Service Desk at (269) 226-5386.";
+	    //This line inputs a message to the user at the close of the ticket.
+		//No more nice IT messages. :P
+            var CustomerComment = "My name is " + name + " and I was the technician that assisted you with " + incidentnumber + ". If for any reason your issue does not appear to be resolved, please contact the Service Desk at (269) 226-5386.";
 
             //Update the state to Fulfilled/Resolved
             if (val == 'RSLV') {
